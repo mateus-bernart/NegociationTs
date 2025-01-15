@@ -6,7 +6,6 @@ export class Negociacoes {
         this.negociacoes.push(negociacao);
     }
     lista() {
-        // Duplica a lista
         return this.negociacoes;
     }
 }
