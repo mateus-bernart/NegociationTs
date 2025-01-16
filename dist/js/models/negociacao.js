@@ -11,7 +11,6 @@ export class Negociacao {
     get volume() {
         return this.quantidade * this.valor;
     }
-    //chamar a função independente de sua instância.
     static criaDe(dataString, quantidadeString, valorString) {
         const exp = /-/g;
         const data = new Date(dataString.replace(exp, ","));
