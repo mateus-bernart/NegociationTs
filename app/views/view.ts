@@ -3,7 +3,14 @@ export abstract class View<T> {
   private escapar = false;
 
   constructor(seletor: string, escapar?: boolean) {
-    this.elemento = document.querySelector(seletor);
+    const elemento = document.querySelector(seletor);
+
+    if (elemento) {
+      this.elemento = elemento as HTMLElement;
+    } else {
+      throw Error(`Seletor ${elemento} não existe no DOM. Verifique.`);
+    }
+
     //Se não passar nada, 'escapar' é undefined, por isso definir com um valor padrão (false).
     if (escapar) {
       this.escapar = escapar;
