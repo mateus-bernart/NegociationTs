@@ -1,4 +1,6 @@
 export function imprimir(...objetos) {
-    objetos.forEach(objeto => {
-    });
+    for (let objeto of objetos) {
+        console.log(objeto.paraTexto());
+    }
 }
+//# sourceMappingURL=imprimir.js.map
